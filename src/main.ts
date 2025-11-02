@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-   origin: ['https://frontend-rho-beryl-55.vercel.app','http://localhost:3000'],
+   origin: ['https://front-iota-eight.vercel.app','http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -23,6 +23,6 @@ async function bootstrap() {
   setupSocket(server, tasksService);
 
   await app.listen(5001);
-  console.log('Backend running on http://localhost:5001');
+  console.log('Backend running on https://taskbackend-xmwy.onrender.com');
 }
 bootstrap();
