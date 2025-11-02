@@ -4,7 +4,7 @@ import { TasksController } from './tasks.controller';
 import { TasksService } from './tasks.service';
 import { Task, TaskSchema } from './task.schema';
 import { UsersModule } from '../users/users.module';
-import { NotificationModule } from 'src/notification/notification.module';
+import { NotificationModule } from '../notification/notification.module';
 
 @Module({
   imports: [
