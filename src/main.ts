@@ -12,7 +12,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'https://frontendrepo-three.vercel.app',
-      // 'http://localhost:3000'
+      'http://localhost:3000'
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -25,8 +25,9 @@ async function bootstrap() {
   const tasksService = app.get(TasksService);
   setupSocket(server, tasksService);
 
-  await app.listen(5001);
-  console.log('Backend running on 5001');
+  const port = process.env.PORT || 5001;
+  await app.listen(port);
+  console.log(`Backend running on port ${port}`);
 }
 
 bootstrap();
