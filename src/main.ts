@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-   origin: ['https://front-nu-orpin.vercel.app','http://localhost:3000'],
+   origin: ['https://frontendrepo-lake.vercel.app','http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -25,4 +25,5 @@ async function bootstrap() {
   await app.listen(5001);
   console.log('Backend running on https://taskbackend-xmwy.onrender.com');
 }
+
 bootstrap();
