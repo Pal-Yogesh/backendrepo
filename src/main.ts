@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-   origin: ['https://front-iota-eight.vercel.app','http://localhost:3000'],
+   origin: ['https://front-nu-orpin.vercel.app','http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
